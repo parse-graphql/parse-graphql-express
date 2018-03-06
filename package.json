@@ -13,6 +13,14 @@
     "build": "babel src -d lib",
     "prepublishOnly": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parse-graphql/parse-graphql-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/parse-graphql/parse-graphql-express/issues"
+  },
+  "homepage": "https://github.com/parse-graphql/parse-graphql-express#readme",
   "dependencies": {
     "@parse-graphql/schema": "^0.2.0",
     "babel-runtime": "^6.26.0",
