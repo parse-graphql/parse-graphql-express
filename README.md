@@ -19,10 +19,10 @@ const parseGraphQL = require('@parse-graphql/express');
 
 const graphqlAPI = parseGraphQL({
   appId,
-  masterKey, // Needed to fetch schema (optional if parseSchema used)
+  masterKey,
   serverURL,
-  dynamicSchema: true, // Whether or not to recreate schema on every request
-  graphiql: true, // Whether or not to run graphiql
+  dynamicSchema: true,
+  graphiql: true,
 });
 
 app.use('/graphql', graphqlAPI);

@@ -35,4 +35,6 @@ export default function parseGraphQLExpress(options) {
       context: { sessionToken }
     })),
   );
+
+  return app;
 }
