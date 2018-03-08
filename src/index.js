@@ -1,7 +1,6 @@
 import graphqlHTTP from 'express-graphql';
-import express from 'express';
 import generateSchema from '@parse-graphql/schema';
-import sessionTokenMiddleware from './sessionTokenMiddleware';
+import getSessionToken from './getSessionToken';
 
 const getSchema = (() => {
   let schema;
@@ -13,7 +12,7 @@ const getSchema = (() => {
   }
 })();
 
-export default function parseGraphQLExpress(options) {
+export default function parseGraphqlHTTP(options) {
   const {
     graphiql,
     parseSchema,
@@ -25,16 +24,11 @@ export default function parseGraphQLExpress(options) {
     'parseSchema is set and dynamicSchema is true. Schema will not be dynamic.');
   }
 
-  const app = express();
-  app.use(
-    '/',
-    sessionTokenMiddleware,
-    graphqlHTTP(async ({ sessionToken }) => ({
-      graphiql,
-      schema: await getSchema(options, dynamicSchema),
-      context: { sessionToken }
-    })),
-  );
-
-  return app;
+  return graphqlHTTP(async (request) => ({
+    graphiql,
+    schema: await getSchema(options, dynamicSchema),
+    context: {
+      sessionToken: getSessionToken(request),
+    },
+  }));
 }

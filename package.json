@@ -24,7 +24,6 @@
   "dependencies": {
     "@parse-graphql/schema": "^0.2.0",
     "babel-runtime": "^6.26.0",
-    "express": "^4.16.2",
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.1"
   },

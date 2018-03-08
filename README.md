@@ -1,9 +1,9 @@
-# Parse Server GraphQL Express [![npm (scoped)](https://img.shields.io/npm/v/@parse-graphql/express.svg)](https://www.npmjs.com/package/@parse-graphql/express) [<img src="https://github.com/parse-graphql/art/blob/master/logo.svg" width="100" height="100" align="right" alt="Parse GraphQL Logo">](https://github.com/parse-graphql)
-
+# Parse GraphQL HTTP [![npm (scoped)](https://img.shields.io/npm/v/@parse-graphql/express.svg)](https://www.npmjs.com/package/@parse-graphql/express) [<img src="https://github.com/parse-graphql/art/blob/master/logo.svg" width="100" height="100" align="right" alt="Parse GraphQL Logo">](https://github.com/parse-graphql)
 
 **WIP**
 
-Uses [parse-graphql-schema](https://github.com/parse-graphql/parse-graphql-schema) to automatically create a GraphQL API from an instance of [parse-server](https://github.com/parse-community/parse-server).
+Connect style middleware that uses [parse-graphql-schema](https://github.com/parse-graphql/parse-graphql-schema) 
+to automatically create a GraphQL API from an instance of [parse-server](~://github.com/parse-community/parse-server).
 
 ## Install
 
@@ -11,22 +11,27 @@ Uses [parse-graphql-schema](https://github.com/parse-graphql/parse-graphql-schem
 
 ## Usage
 
-This wraps [express-graphql](https://github.com/graphql/express-graphql) and can be mounted on an express app:
+This wraps [express-graphql](https://github.com/graphql/express-graphql) and can be used with frameworks such as
+[Express](http://expressjs.com/), [Restify](http://restify.com/), and [Connect](https://github.com/senchalabs/connect).
 
+Here's an example using express, see more in the [examples repo](https://github.com/parse-graphql/examples).
 ```javascript
+const express = require('express');
 const parseGraphQL = require('@parse-graphql/express');
 
-// ...
+const app = express();
 
 const graphqlAPI = parseGraphQL({
-  appId,
-  masterKey,
-  serverURL,
+  appId: 'foo',
+  masterKey: 'bar',
+  serverURL: 'http://foobar.com/parse',
   dynamicSchema: true,
   graphiql: true,
 });
 
 app.use('/graphql', graphqlAPI);
+
+app.listen(4001);
 ```
 
 ## Options

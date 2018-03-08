@@ -1,12 +1,4 @@
-export default function sessionTokenMiddleware(req, res, next) {
-  const sessionToken = getSessionToken(req);
-  if (sessionToken) {
-    req.sessionToken = sessionToken;
-  }
-  next();
-}
-
-function getSessionToken(req) {
+export default function getSessionToken(req) {
   const authorizationHeader = req.headers && req.headers.authorization;
   if (!authorizationHeader) {
     return null;
