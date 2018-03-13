@@ -1,4 +1,4 @@
-# Parse GraphQL HTTP [![npm (scoped)](https://img.shields.io/npm/v/@parse-graphql/express.svg)](https://www.npmjs.com/package/@parse-graphql/express) [<img src="https://github.com/parse-graphql/art/blob/master/logo.svg" width="100" height="100" align="right" alt="Parse GraphQL Logo">](https://github.com/parse-graphql)
+# Parse GraphQL HTTP [![npm (scoped)](https://img.shields.io/npm/v/@parse-graphql/express.svg)](https://www.npmjs.com/package/@parse-graphql/express) [<img src="https://raw.githubusercontent.com/parse-graphql/art/master/logo.svg?sanitize=true" width="100" height="100" align="right" alt="Parse GraphQL Logo">](https://github.com/parse-graphql)
 
 **WIP**
 
