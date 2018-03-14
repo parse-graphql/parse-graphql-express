@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/parse-graphql/parse-graphql-express#readme",
   "dependencies": {
-    "@parse-graphql/schema": "^0.2.0",
+    "@parse-graphql/schema": "^0.3.0",
     "babel-runtime": "^6.26.0",
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.1"
