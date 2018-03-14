@@ -1,5 +1,7 @@
 # Parse GraphQL HTTP [![npm (scoped)](https://img.shields.io/npm/v/@parse-graphql/express.svg)](https://www.npmjs.com/package/@parse-graphql/express) [<img src="https://raw.githubusercontent.com/parse-graphql/art/master/logo.svg?sanitize=true" width="100" height="100" align="right" alt="Parse GraphQL Logo">](https://github.com/parse-graphql)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/parse-graphql/parse-graphql-express.svg)](https://greenkeeper.io/)
+
 **WIP**
 
 Connect style middleware that uses [parse-graphql-schema](https://github.com/parse-graphql/parse-graphql-schema) 
